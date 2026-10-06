@@ -36,9 +36,9 @@ namespace WinFormsApp2
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 listBox1.Items.Add(
-                    row["BookKey"] + "-" +
-                    row["Title"] + "-" +
-                    row["Pages"] + "-"
+                    row["BookKey"] + "_" +
+                    row["Title"] + "_(" +
+                    row["Pages"] + ")"
                 );
             }
         }
@@ -54,7 +54,7 @@ namespace WinFormsApp2
             if (listBox != null && listBox.SelectedIndex != -1)
             {
                 string selectedItemText = listBox.SelectedItem.ToString();
-                string[] selectedItemParts = selectedItemText.Split('-');
+                string[] selectedItemParts = selectedItemText.Split('_');
 
                 selectedBookKey = selectedItemParts[0];
                 selectedTitle = selectedItemParts[1];
