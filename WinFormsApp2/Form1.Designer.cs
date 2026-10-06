@@ -36,7 +36,7 @@
             button2 = new Button();
             label4 = new Label();
             textBox1 = new TextBox();
-            button3 = new Button();
+            updateTitle = new Button();
             label5 = new Label();
             button4 = new Button();
             label6 = new Label();
@@ -131,15 +131,16 @@
             textBox1.Size = new Size(298, 31);
             textBox1.TabIndex = 4;
             // 
-            // button3
+            // updateTitle
             // 
-            button3.BackColor = Color.LightSkyBlue;
-            button3.Location = new Point(45, 516);
-            button3.Name = "button3";
-            button3.Size = new Size(112, 34);
-            button3.TabIndex = 3;
-            button3.Text = "Edit TItle";
-            button3.UseVisualStyleBackColor = false;
+            updateTitle.BackColor = Color.LightSkyBlue;
+            updateTitle.Location = new Point(45, 516);
+            updateTitle.Name = "updateTitle";
+            updateTitle.Size = new Size(112, 34);
+            updateTitle.TabIndex = 3;
+            updateTitle.Text = "Edit TItle";
+            updateTitle.UseVisualStyleBackColor = false;
+            updateTitle.Click += updateTitle_Click;
             // 
             // label5
             // 
@@ -251,7 +252,7 @@
             Controls.Add(textBox1);
             Controls.Add(button2);
             Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(updateTitle);
             Controls.Add(button1);
             Controls.Add(label9);
             Controls.Add(label3);
@@ -279,7 +280,7 @@
         private Button button2;
         private Label label4;
         private TextBox textBox1;
-        private Button button3;
+        private Button updateTitle;
         private Label label5;
         private Button button4;
         private Label label6;

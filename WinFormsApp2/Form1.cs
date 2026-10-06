@@ -51,7 +51,7 @@ namespace WinFormsApp2
         private void updateTitleName(object sender, EventArgs e)
         {
             ListBox listBox = sender as ListBox;
-            if(listBox != null && listBox.SelectedIndex != -1)
+            if (listBox != null && listBox.SelectedIndex != -1)
             {
                 string selectedItemText = listBox.SelectedItem.ToString();
                 string[] selectedItemParts = selectedItemText.Split('-');
@@ -91,6 +91,29 @@ namespace WinFormsApp2
 
             LoadBooks();
 
+        }
+
+        private void updateTitle_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OleDbConnection oleDbConnection = new OleDbConnection(connectionString);
+                string query = "UPDATE Books set Title=? WHERE BookKey=?";
+
+                OleDbCommand oleDbCommand = new OleDbCommand(query, oleDbConnection);
+                oleDbCommand.Parameters.AddWithValue("@Title", textBox1.Text);
+                oleDbCommand.Parameters.AddWithValue("@BookKey", selectedBookKey);
+
+                oleDbConnection.Open();
+                oleDbCommand.ExecuteNonQuery();
+                oleDbCommand.Clone();
+
+                MessageBox.Show("Record updated successfully!");
+
+            }catch(Exception a)
+            {
+                MessageBox.Show("Error updating record!");
+            }
         }
     }
 }
