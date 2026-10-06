@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ebncAKKCic4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Falcon\\source\\repos\\WinFormsApp2\\WinFormsApp2\\WinFormsApp2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Falcon\\.nuget\\packages\\system.data.oledb\\10.0.12\\system.data.oledb.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}
